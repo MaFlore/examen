@@ -38,7 +38,7 @@
     <div class="container">
     <h2>Modification d'une inscription</h2>
     <a href="examen/inscriptions.php"><button type="button" class="btn rounded-pill btn-success">Retour</button></a>
-    <form class="form-horizontal" method="post" action="examen/add_etudiant_db.php">
+    <form class="form-horizontal" method="post" action="examen/inscription_inscription_db.php">
         <input class="form-control" type="hidden" id="id" name="id" value="<?= $reponse->id?>">
         <div class=" form-group ">
             <label class="control-label col-sm-2 " for="nom">Etudiant :</label>
