@@ -38,19 +38,19 @@ $reponse = $etudiant->fetch(PDO::FETCH_OBJ);
         <div class="form-group ">
             <label class="control-label col-sm-2 " for="prenom">Prenom :</label>
             <div class="col-sm-10 ">
-                <input type="text" class="form-control " id="nom" name="nom" placeholder="Prenom" value="<?= $reponse->prenom?>" required>
+                <input type="text" class="form-control " id="prenom" name="prenom" placeholder="Prenom" value="<?= $reponse->prenom?>" required>
             </div>
         </div>
         <div class="form-group ">
             <label class="control-label col-sm-2 " for="email">Email :</label>
             <div class="col-sm-10 ">
-                <input type="text" class="form-control " id="email" name="email" placeholder="Email" value="<?= $reponse->prenom?>" required>
+                <input type="email" class="form-control " id="email" name="email" placeholder="Email" value="<?= $reponse->email?>" required>
             </div>
         </div>
         <div class="form-group ">
             <label class="control-label col-sm-2 " for="date_naissance">Date Naissance :</label>
             <div class="col-sm-10 ">
-                <input type="date" class="form-control " id="date_naissance" name="date_naissance" required>
+                <input type="date" class="form-control " id="date_naissance" name="date_naissance" value="<?= $reponse->date_naissance?>" required>
             </div>
         </div>
         <div class="form-group button">
