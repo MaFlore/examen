@@ -41,9 +41,9 @@
     <form class="form-horizontal" method="post" action="examen/update_inscription_db.php">
         <input class="form-control" type="hidden" id="id" name="id" value="<?= $reponse->id?>">
         <div class=" form-group ">
-            <label class="control-label col-sm-2 " for="nom">Etudiant :</label>
+            <label class="control-label col-sm-2 " for="etudiant_id">Etudiant :</label>
             <div class="col-sm-8 form-group ">
-                <select class="form-control" name="etudiant_id">
+                <select class="form-control" name="etudiant_id" value="<?= $reponse->etudiant_id?>">
                     <?php
                         foreach( $liste_etudiants as $etudiant ) {
                     ?>
@@ -55,9 +55,9 @@
             </div>
         </div>
         <div class="form-group ">
-            <label class="control-label col-sm-2 " for="prenom">Filiere :</label>
+            <label class="control-label col-sm-2 " for="filiere_id">Filiere :</label>
             <div class="col-sm-8 form-group ">
-                <select class="form-control" name="filiere_id">
+                <select class="form-control" name="filiere_id" value="<?= $reponse->filiere_id?>">
                     <?php
                         foreach( $liste_filieres as $filiere ) {
                     ?>
@@ -69,9 +69,9 @@
             </div>
         </div>
         <div class="form-group ">
-            <label class="control-label col-sm-2 " for="email">Année académique :</label>
+            <label class="control-label col-sm-2 " for="annee_id">Année académique :</label>
             <div class="col-sm-8 form-group ">
-                <select class="form-control" name="annee_id">
+                <select class="form-control" name="annee_id" value="<?= $reponse->annee_id?>">
                     <?php
                         foreach( $liste_annees as $annee ) {
                     ?>
