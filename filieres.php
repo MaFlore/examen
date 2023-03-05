@@ -20,6 +20,12 @@ include('connexionDB.php')
         <?php include('navigation.php') ?>
     </nav>
     <div class="container">
+        <div style="text-align: right;">
+            <h5>Vous êtes connecté M/Mlle <?php echo $_SESSION['nom'].' '.$_SESSION['prenom']; ?></h5>
+            <a href="">
+                <button type="button" class="btn rounded-pill btn-info">Deconnectez-vous !</button>
+            </a>
+        </div>
         <div class="container-xxl flex-grow-1 container-p-y">
             <h3> Listes des filières</h3>
             <a href="examen/add_filiere.php"><button type="button" class="btn rounded-pill btn-primary">Ajouter</button></a>
