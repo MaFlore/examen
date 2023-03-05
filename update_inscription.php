@@ -1,5 +1,6 @@
 <?php
     include_once("connexionDB.php");
+    session_start();
     
     try{
         $id=$_GET['id'];
