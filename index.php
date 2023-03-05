@@ -1,75 +1,35 @@
-<?php
-
-    include('connexionDB.php');
-    $nombres_etudiants = $connexion->prepare("SELECT * FROM etudiant");
-    $nombres_etudiants->execute();
-    $result_etudiants = $nombres_etudiants->rowCount();
-
-    $nombres_filieres = $connexion->prepare("SELECT * FROM filiere");
-    $nombres_filieres->execute();
-    $result_filieres = $nombres_filieres->rowCount();
-
-    $nombres_annees = $connexion->prepare("SELECT * FROM annee_academique");
-    $nombres_annees->execute();
-    $result_annees = $nombres_annees->rowCount();
-
-    $nombres_inscriptions = $connexion->prepare("SELECT * FROM inscription");
-    $nombres_inscriptions->execute();
-    $result_inscriptions = $nombres_inscriptions->rowCount();
-
-?>
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>App - Gestion</title>
-    <base href="/">
+    <title>Authentification</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="examen/examen.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-    <nav class="navbar navbar-default">
-        <?php include('navigation.php') ?>
-    </nav>
-    <div class="container">
-        <h4 style="text-align: center;">Bienvenue dans notre application de gestion des inscriptions des étudiants !</h4>
-        <h4 style="text-align: center;">Ci-dessous nos statistiques.</h4>
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                <h3>Etudiants</h3>
-                <p><?php echo $result_etudiants?></p>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="card">
-                <h3>Filières</h3>
-                <p><?php echo $result_filieres?></p>
-                </div>
-            </div>
-            
-            <div class="column">
-                <div class="card">
-                <h3>Année académiques</h3>
-                <p><?php echo $result_annees?></p>
-                </div>
-            </div>
-            
-            <div class="column">
-                <div class="card">
-                <h3>Inscriptions</h3>
-                <p><?php echo $result_inscriptions?></p>
-                </div>
-            </div>
+<div class="container">
+    <h4>Bienvenue sur notre plateforme de gestion des inscriptions des etudiants !</h4>
+    <h3>Authentification</h3>
+    <form class="form-horizontal" method="post" action="login_db.php">
+        <div class=" form-group ">
+            <label class="control-label col-sm-2 " for="username">Username :</label>
+            <div class="col-sm-10 ">
+                <input type="text" class="form-control " id="username" name="username" placeholder="username" required>
             </div>
         </div>
+        <div class="form-group ">
+            <label class="control-label col-sm-2 " for="password">Password :</label>
+            <div class="col-sm-10 ">
+                <input type="password" class="form-control " id="password" name="password" placeholder="password" required>
+            </div>
+        </div>
+        <div class="form-group button">
+            <div class="col-sm-offset-2 col-sm-10 ">
+                <button type="submit" name="authentifier" class="btn btn-primary">S'authentifier</button>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
-
 </html>

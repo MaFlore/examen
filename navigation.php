@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <div class="navbar-header">
-        <a class="navbar-brand" href="examen/index.php">APPLICATION DE GESTIONS DES INSCRIPTIONS</a>
+        <a class="navbar-brand" href="examen/accueil.php">APPLICATION DE GESTIONS DES INSCRIPTIONS</a>
     </div>
     <ul class="nav navbar-nav">
         <li>
-            <a href="examen/index.php">Accueil</a>
+            <a href="examen/accueil.php">Accueil</a>
         </li>
         <li>
             <a href="examen/etudiants.php">Etudiants</a>
