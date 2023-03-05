@@ -1,6 +1,7 @@
 <?php
 
     include('connexionDB.php');
+    session_start();
     $nombres_etudiants = $connexion->prepare("SELECT * FROM etudiant");
     $nombres_etudiants->execute();
     $result_etudiants = $nombres_etudiants->rowCount();
@@ -38,6 +39,12 @@
         <?php include('navigation.php') ?>
     </nav>
     <div class="container">
+        <div style="text-align: right;">
+            <h5>Vous êtes connecté M/Mlle <?php echo $_SESSION['nom'].' '.$_SESSION['prenom']; ?></h5>
+            <a href="">
+                <button type="button" class="btn rounded-pill btn-info">Deconnectez-vous !</button>
+            </a>
+        </div>
         <h4 style="text-align: center;">Bienvenue dans notre application de gestion des inscriptions des étudiants !</h4>
         <h4 style="text-align: center;">Ci-dessous nos statistiques.</h4>
         <div class="row">
