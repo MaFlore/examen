@@ -1,5 +1,6 @@
 <?php 
-include('connexionDB.php') 
+include('connexionDB.php');
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
