@@ -36,6 +36,12 @@
         <?php include('navigation.php') ?>
     </nav>
     <div class="container">
+        <div style="text-align: right;">
+            <h5>Vous êtes connecté M/Mlle <?php echo $_SESSION['nom'].' '.$_SESSION['prenom']; ?></h5>
+            <a href="">
+                <button type="button" class="btn rounded-pill btn-info">Deconnectez-vous !</button>
+            </a>
+        </div>
     <h2>Modification d'une inscription</h2>
     <a href="examen/inscriptions.php"><button type="button" class="btn rounded-pill btn-success">Retour</button></a>
     <form class="form-horizontal" method="post" action="examen/update_inscription_db.php">
