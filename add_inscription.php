@@ -33,7 +33,7 @@
     <div class="container">
         <div style="text-align: right;">
             <h5>Vous êtes connecté M/Mlle <?php echo $_SESSION['nom'].' '.$_SESSION['prenom']; ?></h5>
-            <a href="">
+            <a href="examen/deconnexion.php">
                 <button type="button" class="btn rounded-pill btn-info">Deconnectez-vous !</button>
             </a>
         </div>
