@@ -1,5 +1,6 @@
 <?php 
 include('connexionDB.php');
+session_start();
 $id=$_GET['id'];
 
 $filiere = $connexion->prepare('SELECT *  FROM filiere WHERE id=:id');
