@@ -28,7 +28,6 @@ include('connexionDB.php')
                     <tr>
                         <th>ID</th>
                         <th>Code</th>
-                        <th>Actions</th>
                     </tr>
                     <?php 
                     $numero = 0;
