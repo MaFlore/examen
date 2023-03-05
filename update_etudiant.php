@@ -1,5 +1,6 @@
 <?php 
 include('connexionDB.php');
+session_start();
 $id=$_GET['id'];
 
 $etudiant = $connexion->prepare('SELECT *  FROM etudiant WHERE id=:id');
